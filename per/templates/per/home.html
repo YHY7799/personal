@@ -1,0 +1,89 @@
+
+{% extends 'per/base.html' %}
+
+{% block content %}
+   
+
+
+
+    <!-- page header -->
+    <header id="home" class="header" style="margin: -100px;">
+        
+        <div class="overlay"></div>
+        
+        <div class="header-content container">
+
+            <h1 class="header-title">
+                <span class="up" style="color: #e6e6e6;">حياكم الله في صفحتي الشخصية؛</span>
+                <span class="down">مسلم محب لدينه وثقافته،أسعى لنشر الوعي والدفاع عن ديني وهويتي . </span><br>
+            </h1>
+            <p class="header-subtitle" style="font-size:30px;">قال رسول الله صلى الله عليه وسلم: </p>            
+            <p class="header-subtitle" style="font-size:30px;">لا تزولُ قدَما عبدٍ يومَ القيامةِ حتَّى يسألَ عن عمرِهِ فيما أفناهُ...</p>            
+
+        </div> 
+                     
+    </header><!-- end of page header -->
+
+    <!-- about section -->
+    <br> <br>
+    <section class="section pt-0" id="about">
+        <!-- container -->
+        <div class="container text-center">
+            <!-- about wrapper -->
+            <div class="about">
+
+                <div class="about-caption">
+                    <h1 class="section-title mb-3" style="text-align: center;">من أنا؟</h1> <br> <br>
+                    {% for about in about_list %}
+                   <h4 style="text-align: center;">حياتي</h4> {{ about.about_me }} <br>
+                   <h4 style="text-align: center;">التعليم</h4>  {{ about.education }} <br>
+                   <h4 style="text-align: center;">الاهتمامات</h4>  {{ about.intrests }} <br>
+                    {% endfor %}
+                    <p>
+
+                    </p>
+
+                </div>              
+            </div><!-- end of about wrapper -->
+        </div><!-- end of container -->
+    </section> <!-- end of about section -->
+
+    <!-- service section -->
+ 
+
+
+      <div style="text-align: center;" >
+        <a  href="{% url 'blogs'  %}"  class="btn btn-sm" ><h3> اضغط هنا للاطلاع على المقالات</h3></a>
+
+      </div>
+
+      </div> <br> <br>
+
+
+  
+
+
+
+    
+
+
+    <!-- contact section -->
+    <section class="section" id="contact"  >
+        <div class="container text-center" style="margin-left: 30px;">
+            <h6 class="section-title mb-5">للتواصل</h6>
+           <h3> <strong>واتساب</strong></h3> <br>
+            <h3>966510049458</h3>
+            <hr>
+            <h3> <strong>البريد</strong></h3> <br>
+            <h3>yhyy7799@gmail.com</h3>
+
+            <strong></strong> <br>
+            <p></p><br> <br>
+
+        </div><!-- end of container -->
+    </section><!-- end of contact section -->
+
+    
+
+
+{% endblock %}

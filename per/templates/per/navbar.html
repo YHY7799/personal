@@ -1,0 +1,48 @@
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+      <div class="container">
+          <a class="logo" href="/">يحيى</a>         
+          <ul class="nav">
+              <li class="item">
+                  <a class="link" href="{% url 'home' %}">الرئيسية</a>
+              </li>
+              <!-- <li class="item">
+                  <a class="link" href="#about">من أنا</a>
+              </li> -->
+              <li class="item">
+                  <a class="link" href="{% url 'blogs' %}">المقالات</a>
+              </li>
+              
+              {% if user.is_authenticated %}
+                <li class="item">
+                  <a class="link" href="{% url 'add_post' %}">إضافة</a>
+               </li>
+
+               <li class="item">
+                <a class="link" href="{% url 'edit_about' %}">تعديل عني</a>
+             </li>
+             {% endif %}
+              <li class="item">
+                  <a class="link" href="https://yahya-bussiness.herokuapp.com/">صفحة الأعمال</a>
+              </li>
+
+              <li class="item">
+                <a class="link" href="{% url 'login' %}">تسجيل الدخول</a>
+            </li>
+            {% if user.is_authenticated %}
+              <li class="item">
+                <a class="link" href="{% url 'register_user' %}">تسجيل</a>
+              </li>
+              <li class="item">
+                <a class="link" href="{% url 'logout' %}">تسجيل الخروج</a>
+              </li>
+          {% endif %}
+
+          </ul>
+          <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+              <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
+          </a>
+      </div>          
+  </nav><!-- End of Page Navbar -->

@@ -1,0 +1,76 @@
+{% load static %}
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       
+    <!-- Bootstrap +  main styles -->
+
+    <link rel="stylesheet" href="{% static 'vendors/themify-icons/css/themify-icons.css' %}">
+    <!-- costum css -->
+	  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>يحيى إسماعيل</title>
+
+  </head>
+  <body>
+    <div></div> <br> <br> <br>
+      <style>
+        body {
+          background-color: #f4f4f4f4;
+          }
+          .custom-navbar {
+              background-color:#626ca0;
+              }
+          
+      </style>>
+      {% include 'per/navbar.html' %}
+    </div>
+    <br> 
+
+  <div class="container"  dir="rtl">
+
+    <br> <br>
+      {% if messages %}
+        {% for messaage in messages %}
+          
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert">
+              <span aria-hidden="false">&times;</span>
+            </button>
+          </div>
+        {% endfor %}
+      {% endif %}
+    <br><br>
+
+    {% block content %}
+    {% endblock  %}
+  </div> 
+
+         <!-- footer --> <hr>
+    <div class="container" style="background-color: white;">
+      <footer class="footer">       
+          <p class="mb-0">الحقوق محفوظة <script>document.write(new Date().getFullYear())</script> &copy; <a href="https://yahya-bussiness.herokuapp.com/">يحيى</a></p>
+          <div class="social-links text-right m-auto ml-sm-auto">
+         
+
+              <a href="https://twitter.com/al_wlhan7799" class="link"><i class="ti-twitter-alt"></i></a>
+              <a href="https://yahya-bussiness.herokuapp.com/" class="link"><i class="ti-world"></i></a>
+              <a href="https://www.linkedin.com/in/yahya-ismail-82a86211b/" class="link"><i class="ti-linkedin"></i></a>
+              <a href="https://github.com/YHY7799" class="link"><i class="ti-github"></i></a>
+          </div>
+      </footer>
+  </div> <!-- end of page footer -->
+<!-- core  -->
+  <script src="{% static 'vendors/jquery/jquery-3.4.1.js' %}"></script>
+  <script src="{% static 'vendors/bootstrap/bootstrap.bundle.js' %}"></script>
+
+  <!-- bootstrap 3 affix -->
+<script src="{% static 'vendors/bootstrap/bootstrap.affix.js' %}"></script>
+
+  <!-- Meyawo js -->
+  <script src="{% static 'js/meyawo.js' %}"></script>
+
+</body>

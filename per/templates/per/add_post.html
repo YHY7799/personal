@@ -1,0 +1,32 @@
+{% extends 'per/base.html' %}
+
+{% block content %}
+
+<br><br><br>
+{% if user.is_authenticated %}
+	<h1>إضافة مقال</h1>
+	<br/><br/>
+	{% if submitted %}
+		تم الإضافة بنجاح!!!
+
+	{% else %}
+
+		<form action="" method=POST enctype="multipart/form-data">
+			{% csrf_token %}
+
+			{{ form.as_p }}
+
+			<input type="submit" value="إضافة" class="btn btn-secondary">
+
+		</form>
+	{% endif %}
+	
+{% else %}
+	<h1>أنت لست مخولاً ل÷ضافة المقالات</h1> 
+
+	 <!-- <a href="{% url 'login' %}">Login Here</a>  -->
+{% endif %}
+ 
+
+{% endblock %}
+
