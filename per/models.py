@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from datetime import date
 
+
+
 class post(models.Model):
     title = models.CharField('title', max_length=120)
     author = models.CharField('author', max_length=120)

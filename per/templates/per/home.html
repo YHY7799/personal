@@ -1,13 +1,15 @@
 
 {% extends 'per/base.html' %}
 
+{% load static %} 
+
 {% block content %}
    
-
+ 
 
 
     <!-- page header -->
-    <header id="home" class="header" style="margin: -100px;">
+    <header id="home" class="header" style="margin: -16px;">
         
         <div class="overlay"></div>
         
@@ -48,12 +50,15 @@
         </div><!-- end of container -->
     </section> <!-- end of about section -->
 
-    <!-- service section -->
+    <section id="tweets">
+        <h1>تغريداتي:</h1> <br>
+        <a class="twitter-timeline" data-width="700" href="https://twitter.com/al_wlhan7799?ref_src=twsrc%5Etfw">Tweets by al_wlhan7799</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </section> <hr> <br>
  
 
 
       <div style="text-align: center;" >
-        <a  href="{% url 'blogs'  %}"  class="btn btn-sm" ><h3> اضغط هنا للاطلاع على المقالات</h3></a>
+        <a  href="{% url 'blogs'  %}"  class="btn btn-outline-primary btn-lg"><strong> اضغط هنا للاطلاع على المقالات</strong></a>
 
       </div>
 
